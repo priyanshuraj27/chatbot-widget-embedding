@@ -1,0 +1,55 @@
+{
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist",
+    "framework": "vite",
+    "rewrites": [
+        {
+            "source": "/support-widget.html",
+            "destination": "/support-widget.html"
+        },
+        {
+            "source": "/support-widget-embed.js",
+            "destination": "/support-widget-embed.js"
+        },
+        {
+            "source": "/embedding-examples.html",
+            "destination": "/embedding-examples.html"
+        },
+        {
+            "source": "/embed-script-examples.html",
+            "destination": "/embed-script-examples.html"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/support-widget.html",
+            "headers": [
+                {
+                    "key": "X-Frame-Options",
+                    "value": "ALLOWALL"
+                },
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                }
+            ]
+        },
+        {
+            "source": "/support-widget-embed.js",
+            "headers": [
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                },
+                {
+                    "key": "Content-Type",
+                    "value": "application/javascript"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Widget - Easy Embed Examples</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .example-section {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .example-section h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .example-section p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .widget-demo {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            border: 2px dashed #ddd;
+        }
+
+        .note {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .note strong {
+            color: #1976d2;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .controls button:hover {
+            background: #5568d3;
+        }
+
+        .controls button.danger {
+            background: #f44336;
+        }
+
+        .controls button.danger:hover {
+            background: #d32f2f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🚀 Support Widget - Easy Embed Script Examples</h1>
+
+        <!-- Example 1: Inline Widget -->
+        <div class="example-section">
+            <h2>📦 Example 1: Inline Widget</h2>
+            <p>Embed the widget directly in a container on your page.</p>
+
+            <div class="code-block">
+                <code>&lt;!-- 1. Add container --&gt;
+&lt;div id="support-widget-container"&gt;&lt;/div&gt;
+
+&lt;!-- 2. Include the script --&gt;
+&lt;script src="https://your-domain.com/support-widget-embed.js"&gt;&lt;/script&gt;
+
+&lt;!-- 3. Initialize --&gt;
+&lt;script&gt;
+  SupportWidget.init({
+    containerId: 'support-widget-container',
+    width: '400px',
+    height: '600px',
+    widgetUrl: 'https://your-domain.com/support-widget.html'
+  });
+&lt;/script&gt;</code>
+            </div>
+
+            <div class="widget-demo">
+                <div id="inline-widget-container"></div>
+            </div>
+        </div>
+
+        <!-- Example 2: Floating Button -->
+        <div class="example-section">
+            <h2>💬 Example 2: Floating Button (Bottom Right)</h2>
+            <p>Add a floating button that opens the widget when clicked.</p>
+
+            <div class="code-block">
+                <code>&lt;!-- 1. Add container --&gt;
+&lt;div id="floating-widget-container"&gt;&lt;/div&gt;
+
+&lt;!-- 2. Include the script --&gt;
+&lt;script src="https://your-domain.com/support-widget-embed.js"&gt;&lt;/script&gt;
+
+&lt;!-- 3. Initialize with button --&gt;
+&lt;script&gt;
+  SupportWidget.init({
+    containerId: 'floating-widget-container',
+    width: '400px',
+    height: '600px',
+    widgetUrl: 'https://your-domain.com/support-widget.html',
+    showButton: true,
+    buttonText: '💬 Need Help?'
+  });
+&lt;/script&gt;</code>
+            </div>
+
+            <div class="note">
+                <strong>Note:</strong> Look for the floating button in the bottom-right corner of this page!
+            </div>
+
+            <div id="floating-widget-container"></div>
+        </div>
+
+        <!-- Example 3: Fixed Position -->
+        <div class="example-section">
+            <h2>📍 Example 3: Fixed Position Widget</h2>
+            <p>Display the widget in a fixed position on the page.</p>
+
+            <div class="code-block">
+                <code>&lt;!-- Container --&gt;
+&lt;div id="fixed-widget-container"&gt;&lt;/div&gt;
+
+&lt;!-- Initialize with fixed position --&gt;
+&lt;script&gt;
+  SupportWidget.init({
+    containerId: 'fixed-widget-container',
+    width: '350px',
+    height: '550px',
+    widgetUrl: 'https://your-domain.com/support-widget.html',
+    position: 'fixed-bottom-left'  // or 'fixed-bottom-right'
+  });
+&lt;/script&gt;</code>
+            </div>
+
+            <div class="note">
+                <strong>Available positions:</strong> 'inline', 'fixed-bottom-right', 'fixed-bottom-left'
+            </div>
+        </div>
+
+        <!-- Example 4: Responsive Widget -->
+        <div class="example-section">
+            <h2>📱 Example 4: Responsive Widget</h2>
+            <p>Make the widget responsive to its container width.</p>
+
+            <div class="code-block">
+                <code>&lt;!-- Container with custom width --&gt;
+&lt;div id="responsive-widget-container" style="max-width: 600px;"&gt;&lt;/div&gt;
+
+&lt;!-- Initialize with responsive option --&gt;
+&lt;script&gt;
+  SupportWidget.init({
+    containerId: 'responsive-widget-container',
+    height: '700px',
+    widgetUrl: 'https://your-domain.com/support-widget.html',
+    responsive: true  // Widget will take 100% width of container
+  });
+&lt;/script&gt;</code>
+            </div>
+
+            <div class="widget-demo">
+                <div id="responsive-widget-container"></div>
+            </div>
+        </div>
+
+        <!-- Example 5: Dynamic Control -->
+        <div class="example-section">
+            <h2>⚡ Example 5: Dynamic Control</h2>
+            <p>Control the widget programmatically with JavaScript.</p>
+
+            <div class="code-block">
+                <code>&lt;!-- Initialize widget --&gt;
+&lt;script&gt;
+  SupportWidget.init({
+    containerId: 'dynamic-widget-container',
+    width: '400px',
+    height: '600px',
+    widgetUrl: 'https://your-domain.com/support-widget.html'
+  });
+
+  // Resize the widget
+  function resizeWidget() {
+    SupportWidget.resize('500px', '700px');
+  }
+
+  // Destroy the widget
+  function destroyWidget() {
+    SupportWidget.destroy();
+  }
+&lt;/script&gt;</code>
+            </div>
+
+            <div class="controls">
+                <button onclick="resizeSmall()">Resize Small (350px × 500px)</button>
+                <button onclick="resizeLarge()">Resize Large (450px × 700px)</button>
+                <button onclick="destroyDynamic()" class="danger">Destroy Widget</button>
+                <button onclick="recreateDynamic()">Recreate Widget</button>
+            </div>
+
+            <div class="widget-demo">
+                <div id="dynamic-widget-container"></div>
+            </div>
+        </div>
+
+        <!-- Configuration Reference -->
+        <div class="example-section">
+            <h2>⚙️ Configuration Reference</h2>
+
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background: #f5f5f5;">
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Option</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Type</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Default</th>
+                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;"><code>containerId</code></td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">string</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">'support-widget-container'</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">ID of the container element</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;"><code>width</code></td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">string</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">'400px'</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Width of the widget</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;"><code>height</code></td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">string</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">'600px'</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Height of the widget</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;"><code>widgetUrl</code></td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">string</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">'' (required)</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">URL to support-widget.html</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;"><code>responsive</code></td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">boolean</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">false</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Make widget width 100%</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;"><code>position</code></td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">string</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">'inline'</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Position: 'inline', 'fixed-bottom-right',
+                            'fixed-bottom-left'</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;"><code>showButton</code></td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">boolean</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">false</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Show floating button instead of inline widget
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #ddd;"><code>buttonText</code></td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">string</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">'💬 Support'</td>
+                        <td style="padding: 12px; border: 1px solid #ddd;">Text for the floating button</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Include the embed script -->
+    <script src="support-widget-embed.js"></script>
+
+    <script>
+        // Example 1: Inline Widget
+        SupportWidget.init({
+            containerId: 'inline-widget-container',
+            width: '400px',
+            height: '600px',
+            widgetUrl: 'support-widget.html'
+        });
+
+        // Example 2: Floating Button
+        const floatingWidget = Object.create(SupportWidget);
+        floatingWidget.init({
+            containerId: 'floating-widget-container',
+            width: '400px',
+            height: '600px',
+            widgetUrl: 'support-widget.html',
+            showButton: true,
+            buttonText: '💬 Need Help?'
+        });
+
+        // Example 4: Responsive Widget
+        const responsiveWidget = Object.create(SupportWidget);
+        responsiveWidget.init({
+            containerId: 'responsive-widget-container',
+            height: '700px',
+            widgetUrl: 'support-widget.html',
+            responsive: true
+        });
+
+        // Example 5: Dynamic Control
+        const dynamicWidget = Object.create(SupportWidget);
+        dynamicWidget.init({
+            containerId: 'dynamic-widget-container',
+            width: '400px',
+            height: '600px',
+            widgetUrl: 'support-widget.html'
+        });
+
+        function resizeSmall() {
+            dynamicWidget.resize('350px', '500px');
+        }
+
+        function resizeLarge() {
+            dynamicWidget.resize('450px', '700px');
+        }
+
+        function destroyDynamic() {
+            dynamicWidget.destroy();
+        }
+
+        function recreateDynamic() {
+            dynamicWidget.init({
+                containerId: 'dynamic-widget-container',
+                width: '400px',
+                height: '600px',
+                widgetUrl: 'support-widget.html'
+            });
+        }
+    </script>
+</body>
+
+</html>

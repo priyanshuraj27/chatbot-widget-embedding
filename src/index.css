@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Custom styles for support screen */
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ios-blur {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Dark mode custom colors */
+:root {
+  --color-primary: #111111;
+  --color-background-light: #F3F4F6;
+  --color-background-dark: #0A0A0A;
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-background-light {
+  background-color: var(--color-background-light);
+}
+
+.dark .bg-background-dark {
+  background-color: var(--color-background-dark);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+/* Slide-in animation */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
